@@ -10,7 +10,6 @@ public static class Game
                 {
                         Console.WriteLine("\nEscolha sua jogada: \n1 para pedra; \n2 para papel; \n3 para tesoura; \nou digite a palavra correspondente.  ");
                         string? Play = Console.ReadLine();
-                        Console.ForegroundColor = ConsoleColor.DarkBlue;
                         if (Play == "1" || Play?.ToLower() == "pedra")
                                 Console.WriteLine("Você escolheu pedra!");
                         else if (Play == "2" || Play?.ToLower() == "papel")
@@ -19,7 +18,9 @@ public static class Game
                                 Console.WriteLine("Você escolheu tesoura!");
                         else
                         {
+                                Console.ForegroundColor = ConsoleColor.DarkBlue;
                                 Console.WriteLine("Jogada inválida. Escolha uma opção válida.");
+                                Console.ResetColor();
                                 continue;
                         }
                         int cpuChoice = RandomNumberGenerator.GetInt32(1, 4);
@@ -31,6 +32,7 @@ public static class Game
                         };
                         Console.WriteLine($"\nO computador escolheu {cpuPlay}\n");
                         Console.ResetColor();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         string result;
                         if (Play == "1" || Play?.ToLower() == "pedra")
                         {
@@ -86,6 +88,7 @@ public static class Game
                                         result = "draw";
                                 }
                         }
+                        Console.ResetColor();
                         return result;
                 }
         }

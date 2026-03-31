@@ -28,7 +28,7 @@ public static class UI
         Console.ForegroundColor = ConsoleColor.White;
         if (Continue.Key != ConsoleKey.Enter)
         {
-            Console.WriteLine("\nObrigado por jogar! Até a próxima!");
+            Console.WriteLine("\n\nObrigado por jogar! Até a próxima!\n");
             return false;
         }
         return true;
