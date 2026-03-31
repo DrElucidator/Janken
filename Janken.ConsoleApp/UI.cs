@@ -12,16 +12,20 @@ public static class UI
     public static void Header()
     {
         Console.Clear();
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.DarkBlue;
         //System.Console.WriteLine("じゃんけんゲームを開始します。");
         Console.WriteLine("Bem vindo ao jogo de pedra, papel e tesoura!\n");
         Console.WriteLine("Aperte ENTER para iniciar...");
         Console.ReadKey();
+        Console.ForegroundColor = ConsoleColor.White;
     }
-
     public static bool Retry()
     {
-        Console.WriteLine("Pressione ENTER para jogar novamente ou qualquer outra tecla para sair");
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+        Console.WriteLine("\nPressione ENTER para jogar novamente ou qualquer outra tecla para sair");
         ConsoleKeyInfo Continue = Console.ReadKey();
+        Console.ForegroundColor = ConsoleColor.White;
         if (Continue.Key != ConsoleKey.Enter)
         {
             Console.WriteLine("\nObrigado por jogar! Até a próxima!");

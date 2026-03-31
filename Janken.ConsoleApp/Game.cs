@@ -10,6 +10,7 @@ public static class Game
                 {
                         Console.WriteLine("\nEscolha sua jogada: \n1 para pedra; \n2 para papel; \n3 para tesoura; \nou digite a palavra correspondente.  ");
                         string? Play = Console.ReadLine();
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
                         if (Play == "1" || Play?.ToLower() == "pedra")
                                 Console.WriteLine("Você escolheu pedra!");
                         else if (Play == "2" || Play?.ToLower() == "papel")
@@ -29,6 +30,7 @@ public static class Game
                                 3 => "tesoura",
                         };
                         Console.WriteLine($"\nO computador escolheu {cpuPlay}\n");
+                        Console.ResetColor();
                         string result;
                         if (Play == "1" || Play?.ToLower() == "pedra")
                         {
